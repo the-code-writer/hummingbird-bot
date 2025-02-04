@@ -1,0 +1,23 @@
+{
+    "update_id": 1,
+    "message": {
+        "message_id": 200,
+        "from": {
+            "id": 300,
+            "is_bot": true,
+            "first_name": "John",
+            "last_name": "Doe",
+            "username": "john.doe",
+            "language_code": "en-US",
+        },
+        "chat": {
+            "id": 700,
+            "first_name": "John",
+            "last_name": "Doe",
+            "username": "john.doe",
+            "type": "text"
+        },
+        "date": "2025-02-12T23:53:54Z906",
+        "text": "Hello, world"
+    }
+}

@@ -1,0 +1,91 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Dev\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add @solana/web3.js dotenv
+
+PATH: 
+  C:\Program Files (x86)\VMware\VMware Player\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Go\bin;C:\Users\Dev\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Apps\gradle-8.4\bin;C:\Apps\dev\jdk-21.0.1\bin;C:\Users\Dev\.avm\bin\;C:\Users\Dev\.avm\bin\anchor.exe;C:\Users\Dev\.local\share\solana\install\active_release\bin;C:\Users\Dev\AppData\Local\pnpm;C:\Users\Dev\.local\share\solana\install\active_release\bin;C:\Users\Dev\.cargo\bin;C:\Users\Dev\AppData\Local\Microsoft\WindowsApps;C:\Users\Dev\AppData\Local\GitHubDesktop\bin;C:\Users\Dev\go\bin;C:\Program Files\JetBrains\PyCharm Community Edition 2022.2.1\bin;;C:\Program Files\JetBrains\PhpStorm 2022.2.1\bin;;C:\Program Files\JetBrains\WebStorm 2021.1.3\bin;;C:\Users\Dev\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dev\AppData\Roaming\npm;C:\Users\Dev\AppData\Roaming\nvm;C:\Program Files\nodejs;
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: ENOENT: no such file or directory, copyfile 'C:\Users\Dev\AppData\Local\Yarn\Cache\v6\npm-estraverse-4.3.0-398ad3f3c5a24948be7725e83d11a7de28cdbd1d-integrity\node_modules\estraverse\.jshintrc' -> 'C:\Users\Dev\bot\sol-1\node_modules\@typescript-eslint\utils\node_modules\estraverse\.jshintrc'
+
+npm manifest: 
+  {
+    "name": "typescript-template",
+    "version": "1.0.7",
+    "description": "A complete Node.js project template using TypeScript and following general best practices.",
+    "keywords": [
+      "typescript",
+      "template"
+    ],
+    "author": {
+      "name": "Chris Wells",
+      "url": "https://chriswells.io"
+    },
+    "license": "BSD-3-Clause",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/chriswells0/node-typescript-template.git"
+    },
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist/"
+    ],
+    "scripts": {
+      "build": "npm run clean && npm run lint && tsc",
+      "changelog": "conventional-changelog -p angular -u",
+      "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+      "clean": "node -e \"var { rmdirSync, existsSync } = require('fs'), path = require('path'); ['./.nyc_output', './coverage', './dist'].forEach(fPath => {if (existsSync(path.join(__dirname, fPath))) rmdirSync(path.join(__dirname, fPath), { recursive: true })}); process.exit(0);\"",
+      "clean:all": "npm run clean && (rm -r ./node_modules || true)",
+      "cover": "nyc npm run test",
+      "cover:check": "nyc --check-coverage --reporter=lcov npm run test",
+      "lint": "eslint --ext .ts --fix src/**/*.ts test/**/*.ts",
+      "preversion": "npm run build && npm run cover:check",
+      "postversion": "git push && git push --tags",
+      "prepare": "npm run build",
+      "serve": "nodemon ./src/index.ts",
+      "test": "mocha",
+      "upgrade": "npx npm-check -u",
+      "version": "npm run build && npm run changelog:update"
+    },
+    "devDependencies": {
+      "@types/chai": "^4.3.5",
+      "@types/mocha": "^10.0.1",
+      "@types/node": "^20.4.1",
+      "@typescript-eslint/eslint-plugin": "^5.61.0",
+      "@typescript-eslint/parser": "^5.61.0",
+      "chai": "^4.3.7",
+      "conventional-changelog-cli": "^5.0.0",
+      "cz-conventional-changelog": "^3.3.0",
+      "eslint": "^8.44.0",
+      "mocha": "^10.2.0",
+      "nodemon": "^3.0.1",
+      "nyc": "^15.1.0",
+      "source-map-support": "^0.5.21",
+      "ts-node": "^10.9.1",
+      "typescript": "^5.1.6"
+    },
+    "config": {
+      "commitizen": {
+        "path": "./node_modules/cz-conventional-changelog"
+      }
+    },
+    "dependencies": {
+      "sitka": "^1.1.1",
+      "typescript-template": "file:"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
