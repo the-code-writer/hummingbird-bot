@@ -7,8 +7,8 @@
     "template"
   ],
   "author": {
-    "name": "Chris Wells",
-    "url": "https://chriswells.io"
+    "name": "The ~Code Writer",
+    "url": "https://thecodewriter.io"
   },
   "license": "BSD-3-Clause",
   "repository": {
@@ -22,8 +22,6 @@
   ],
   "scripts": {
     "build": "npm run clean && npm run lint && tsc",
-    "changelog": "conventional-changelog -p angular -u",
-    "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "clean": "node -e \"var { rmdirSync, existsSync } = require('fs'), path = require('path'); ['./.nyc_output', './coverage', './dist'].forEach(fPath => {if (existsSync(path.join(__dirname, fPath))) rmdirSync(path.join(__dirname, fPath), { recursive: true })}); process.exit(0);\"",
     "clean:all": "npm run clean && (rm -r ./node_modules || true)",
     "cover": "nyc npm run test",
@@ -37,8 +35,7 @@
     "prestart": "tsc",
     "upgrade": "npx npm-check -u",
     "dev": "nodemon ./src/app.ts",
-    "start": "ts-node src/app.ts",
-    "version": "npm run build && npm run changelog:update"
+    "start": "ts-node src/app.ts"
   },
   "devDependencies": {
     "@types/bn.js": "^5.1.5",
@@ -51,8 +48,6 @@
     "@typescript-eslint/parser": "^8.19.0",
     "axios": "^1.7.9",
     "chai": "^5.1.2",
-    "conventional-changelog-cli": "^5.0.0",
-    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^16.4.7",
     "eslint": "^9.17.0",
     "express": "^4.21.2",
@@ -70,11 +65,6 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.7.2",
     "typescript-template": "file:"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   },
   "dependencies": {
     "@metaplex-foundation/js": "^0.20.1",
